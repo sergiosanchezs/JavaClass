@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author 767520
+ * @author Sergio Sanchez
  */
 public class Workshop1 {
 
