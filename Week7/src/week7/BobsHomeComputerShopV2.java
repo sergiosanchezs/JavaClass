@@ -1,7 +1,7 @@
 /**
  * 
  */
-package week6;
+package week7;
 import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * @author Sergio Sanchez
  * %$2N
  */
-public class BobsHomeComputerShop {
+public class BobsHomeComputerShopV2 {
 
 	/**
 	 * @param args
