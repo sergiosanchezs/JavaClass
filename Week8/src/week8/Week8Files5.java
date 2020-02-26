@@ -3,7 +3,6 @@
  */
 package week8;
 import java.io.File;
-import java.io.PrintWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -21,23 +20,32 @@ public class Week8Files5 {
 		String str;
 		
 		// Reading a file
-		File filename = new File("names.txt");
-		Scanner inputFile = new Scanner(filename);
-		
-		if (inputFile.hasNextLine()) 
-			System.out.println("The content of the file is:");
-		else
-			System.out.println("No lines to be read");
-		
-		while(inputFile.hasNextLine()) 
-		{
-			str = inputFile.nextLine();
-			System.out.println(str);
+		File fileName = new File("names.txt");
+		if (fileName.isFile()) {
+			
+			Scanner inputFile = new Scanner(fileName);
+			
+			if (inputFile.hasNextLine()) 
+				System.out.println("The content of the file is:");
+			else
+				System.out.println("No lines to be read");
+			
+			while(inputFile.hasNextLine()) 
+			{
+				str = inputFile.nextLine();
+				System.out.println(str);
+			}
+			
+			inputFile.close();
+			
+			// deleting a file
+			fileName.delete();
+			System.out.println("The file called " + fileName + " was deleted");
 			
 		}
-		
-		inputFile.close();
-
+		else 
+			System.out.println("The file called " + fileName + " does not exist!");
+			
 
 	}
 
