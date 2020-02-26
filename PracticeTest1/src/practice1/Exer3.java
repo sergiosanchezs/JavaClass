@@ -32,6 +32,14 @@ public class Exer3 {
 		System.out.printf(strFormat);
 		JOptionPane.showMessageDialog(null, strFormat);
 		
+		int n = 3;
+		System.out.println("n = " + n);
+		int x = ++n;
+		System.out.println("n = " + n);
+		int y =  n++;
+		System.out.println("n = " + n);
+		System.out.println("X = " + x + " Y = " + y);
+		
 		System.exit(0);
 		
 	}
