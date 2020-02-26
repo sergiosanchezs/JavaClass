@@ -9,20 +9,19 @@ import java.io.IOException;
  * @author Sergio Sanchez
  *
  */
-public class Week8Files2 {
+public class Week8Files4 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) throws IOException
 	{
+
+		PrintWriter outFile = new PrintWriter("src/name.txt");
 		
-		PrintWriter firstfile = new PrintWriter("../name.txt");
+		outFile.println("Sergio");
 		
-		firstfile.println("Sergio");
-		
-		firstfile.close();
-		
+		outFile.close();
 
 	}
 
