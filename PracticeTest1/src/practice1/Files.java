@@ -16,7 +16,7 @@ public class Files {
 	 */
 	public static void main(String[] args) throws IOException 
 	{ 
-
+		// Writing a file overwritten the information.
 		PrintWriter outFile = new PrintWriter("overwrite.txt");
 		outFile.println("Ivan");
 		outFile.println("Sergio");
