@@ -9,7 +9,7 @@ import java.io.IOException;
  * @author Sergio Sanchez
  *
  */
-public class Week8Files {
+public class Week8Files1 {
 
 	/**
 	 * @param args
