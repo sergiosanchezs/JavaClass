@@ -40,6 +40,14 @@ public class Exer3 {
 		System.out.println("n = " + n);
 		System.out.println("X = " + x + " Y = " + y);
 		
+		
+		// Multiple variables initialization in for loop
+		int g = 4;
+		for (int k = 0, l = 5; k < 5 && l > 0; k++, l--, g--) 
+		{
+			System.out.println("k = " + k + " l = " + l + " g = " + g);
+		}
+		
 		System.exit(0);
 		
 	}
