@@ -1,7 +1,7 @@
 /**
  * 
  */
-package assignment3;
+package practice1;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
