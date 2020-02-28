@@ -11,28 +11,17 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
- * This program is to create a file with a list of numbers provided
- * by the user. The size of the list and the name of the file are
- * chosen by the user.  
+ * This program is to create a file with a list of numbers from 10
+ * to 100 with a step of 10. Then, ask to the user for the file name
+ * until the filename is 'myfile.txt' to read the list of numbers
+ * sum and count them, and calculate the average. For last, It prints
+ * the authors name. 
  * 
  * @author Sergio Sanchez
  * @version 1.0
  * @since   2020-02-27
  */
 
-/*
-1.	Create a program called “A3-ID#” of your choice you must use the following in one program.
-Create a program that will create a list of things, open it, add the numbers then print the numbers.
-
-a.	You must use five methods each method must do something different 
-b.	All inputs must be through dialog boxes; all output must be through show Message dialog box.
-c.	Create a file, the file must have a list of numbers, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. 
-d.	Validate that the file name is correct after the user enters the name.
-e.	Your output from assignment 7 must be total of the numbers, avg of the numbers, print each number from the file.
-f.	Print your names by using a method
-g.	Take one snip for each output
-h.	Upload your snips and the “A3-ID#”.java file
- * */
 public class A3_ID0767520 {
 
 	/**
@@ -63,7 +52,7 @@ public class A3_ID0767520 {
 	}
 	
 	/**
-	 * 
+	 * This method prints the author name.
 	 */
 	public static void printMyName(){
 		String name = "Sergio Sanchez";
@@ -129,7 +118,7 @@ public class A3_ID0767520 {
 		return number;
 	}
 	/**
-	 * This function reads a file with integers numbers and 
+	 * This method reads a file with integers numbers and 
 	 * add and count them to calculate the average.
 	 * 
 	 * @param fileName This is the name of the file to read.
@@ -165,7 +154,7 @@ public class A3_ID0767520 {
 	}
 	
 	/**
-	 * This is a void function to print on the screen
+	 * This is a void method to print on the screen
 	 * a message to the user using JOptionPane.
 	 * 
 	 * @param message This is the string to print
@@ -175,7 +164,7 @@ public class A3_ID0767520 {
 	}
 	
 	/**
-	 * This function takes the total and the quantity
+	 * This method takes the total and the quantity
 	 * numbers and return the average.
 	 * 
 	 * @param total This is the total sum of all the numbers.
