@@ -6,17 +6,10 @@ package assignment4;
 import javax.swing.JOptionPane;
 
 /**
- * This program is to help Bob remember his schedule.
- * It ask the user to input a day of the week and it 
- * will show the meetings slots for that day. If the typed
- * day is wrong it will show an error and ask again.
- * 
  * @author Sergio Sanchez
- * @version 1.0
- * @since   2020-02-27
+ *
  */
-
-public class A4_ID0767520 {
+public class Assignment4 {
 
 	/**
 	 * @param args Unused
