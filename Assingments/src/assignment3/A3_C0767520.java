@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
  * @since   2020-02-27
  */
 
-public class A3_ID0767520 {
+public class A3_C0767520 {
 
 	/**
 	 * This is the main method when the program call the other
@@ -35,13 +35,7 @@ public class A3_ID0767520 {
 		final String FILE_NAME = "myfile.txt";
 		createAListNumbersFile(FILE_NAME);	// Create the file and attach the numbers
 		
-		String userFileName; 
-		do {
-			userFileName = getFileName();
-			if (!userFileName.equalsIgnoreCase(FILE_NAME))
-				printStr("The filename must be 'myfile.txt'.\nPlease Try Again.");
-			
-		} while (!userFileName.equalsIgnoreCase(FILE_NAME));
+		String userFileName = validateFileName(FILE_NAME);
 		
 		readFromFile(userFileName);
 		
@@ -52,11 +46,29 @@ public class A3_ID0767520 {
 	}
 	
 	/**
+	 * This method validate the right name of the file by getting the input
+	 * of the user and requesting again until the file name is right.
+	 * 
+	 * @param FILE_NAME constant to assure that file name must be equal to it.
+	 * @return String This is the user file name.
+	 */
+	public static String validateFileName(final String FILE_NAME) {
+		String userFileName;
+		do {
+			userFileName = getFileName();
+			if (!userFileName.equalsIgnoreCase(FILE_NAME))
+				printStr("The filename must be 'myfile.txt'.\nPlease Try Again.");
+			
+		} while (!userFileName.equalsIgnoreCase(FILE_NAME));
+		return userFileName;
+	}
+	
+	/**
 	 * This method prints the author name.
 	 */
 	public static void printMyName(){
 		String name = "Sergio Sanchez";
-		JOptionPane.showMessageDialog(null, "My name is " + name + ".");	
+		printStr("My name is " + name);	
 	}
 	
 	/**
@@ -117,6 +129,7 @@ public class A3_ID0767520 {
 		
 		return number;
 	}
+	
 	/**
 	 * This method reads a file with integers numbers and 
 	 * add and count them to calculate the average.
