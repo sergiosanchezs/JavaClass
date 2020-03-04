@@ -155,6 +155,8 @@ public class A3_C0767520 {
 				}
 			} while (inFile.hasNext());
 			
+			inFile.close();
+			
 			message += "The total sum is " + total + "\n";		// Adding the total sum to the display message
 			message += "The average is " + getAverage(total, counter) + "\n";	// adding the average to the display message
 			
