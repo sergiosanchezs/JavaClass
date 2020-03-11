@@ -1,7 +1,7 @@
 /**
  * 
  */
-package week9;
+package week9Class;
 
 /**
  * @author Sergio Sanchez
