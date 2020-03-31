@@ -10,21 +10,51 @@ package assignment5_6;
 public class Quote {
 	public String firstName;
 	public String lastName;
+	public double packageAPrice = 100.55;		//$100.55/hr
+	public int packageAHours;
+	public double packageBPrice = 150.00;		//$150/hr
+	public int packageBHours;
+	public double storageSmallPrice = 8.00;		//$8/day
+	public int storageSmallDays;
+	public double storageLargePrice = 20.01;	//$20.01/day
+	public int storageLargeDays;
+	public double smallBoxesPrice;				//$2.50
+	public int smallBoxesNumber;
+	public double LargeBoxesPrice;				//$4.50
+	public int LargeBoxesNumber;
 	
-//	Package A - $100.55/hr
-//	Package B – $150/hr
-//	Storage Small – $8/day
-//	Storage Large – $20.01/day
-//	Boxes small - $2.50
-//	Boxes large - $4.50
+	public Quote() {
+		this.smallBoxesPrice = 2.50;
+		this.LargeBoxesPrice = 4.50;
+	}
 	
+	public Quote(double boxSmall, double boxLarge) {
+		this.smallBoxesPrice = boxSmall;
+		this.LargeBoxesPrice = boxLarge;
+	}
 	
-	public String username;
-	public String password;
+	public double serviceCost () {
+		double result = 0;
+		result += this.packageAPrice * this.packageAHours;
+		result += this.packageBPrice * this.packageBHours;
+		result += this.storageSmallPrice * this.storageSmallDays;
+		result += this.storageLargePrice * this.storageLargeDays;
+		return result;
+	}
 	
-	final String DB_USERNAME = "ssanchez";
-	final String DB_PASSWORD = "Abc123";
+	public double itemCost() {
+		double result = 0;
+		result += this.smallBoxesPrice * this.smallBoxesNumber;
+		result += this.LargeBoxesPrice * this.LargeBoxesNumber;
+		return result;
+	}
 	
+	public double totalCost() {
+		double result = 0;
+		result += serviceCost ();
+		result += itemCost();
+		return result;
+	}
 	
 
 }
