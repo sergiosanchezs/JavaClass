@@ -4,7 +4,6 @@
 package assignment5_6;
 
 import java.text.DecimalFormat;
-
 import javax.swing.JOptionPane;
 
 /**
@@ -40,30 +39,58 @@ public class Assignment5_6 {
 			
 			// Packages
 			obj.packageAHours = Integer.parseInt(JOptionPane.showInputDialog("How many hours do you want for package A (" 
-					+ ft.format(obj.packageAPrice) + "):\nIf you don't want it just put 0."));
+					+ ft.format(obj.packageAPrice) + "):\nIf you don't want any just put 0."));
 			obj.packageBHours = Integer.parseInt(JOptionPane.showInputDialog("How many hours do you want for package B (" 
-					+ ft.format(obj.packageBPrice) + "):\nIf you don't want it just put 0."));
+					+ ft.format(obj.packageBPrice) + "):\nIf you don't want any just put 0."));
 			
 			// Storage
 			obj.storageSmallDays = Integer.parseInt(JOptionPane.showInputDialog("How many days do you want for a small storage (" 
-					+ ft.format(obj.storageSmallPrice) + "):\nIf you don't want it just put 0."));
+					+ ft.format(obj.storageSmallPrice) + "):\nIf you don't want any just put 0."));
 			obj.storageLargeDays = Integer.parseInt(JOptionPane.showInputDialog("How many hours do you want for a large storage (" 
-					+ ft.format(obj.storageLargePrice) + "):\nIf you don't want it just put 0."));
+					+ ft.format(obj.storageLargePrice) + "):\nIf you don't want any just put 0."));
 			
-			// Boxes
-			obj.smallBoxesNumber = Integer.parseInt(JOptionPane.showInputDialog("How many small boxes (" 
-					+ ft.format(obj.smallBoxesPrice) + ") do you want? :\nIf you don't want it just put 0."));
-			obj.LargeBoxesNumber = Integer.parseInt(JOptionPane.showInputDialog("How many large boxes (" 
-					+ ft.format(obj.LargeBoxesPrice) + ") do you want? :\nIf you don't want it just put 0."));
+			// Which type Box the customer wants
+			obj.boxType = JOptionPane.showInputDialog("Which type of box do you want?\n" + 
+					"type 'S' or 's' for small (" + ft.format(obj.smallBoxesPrice) + ")\n" + 
+					"type 'L' or 'l' for large (" + ft.format(obj.LargeBoxesPrice) + ")\n");
 			
-			JOptionPane.showMessageDialog(null, "The Service Cost is " + ft.format(obj.serviceCost()));
-			JOptionPane.showMessageDialog(null, "The Items Cost is " + ft.format(obj.itemCost()));
-			JOptionPane.showMessageDialog(null, "The Total Cost is " + ft.format(obj.totalCost()));
+			// Calculating the Service Cost
+			
+			if (obj.packageAHours > 0 && obj.packageBHours > 0)		// selecting both packages
+				obj.serviceCost(obj.packageAHours, obj.packageBHours);
+			else if (obj.packageAHours > 0)				// Selecting the package A
+				obj.serviceCost(obj.packageAHours, 'A');
+			else if (obj.packageBHours > 0)				// Selecting the package B
+				obj.serviceCost(obj.packageAHours, 'B');
+			else 	// No package selected
+				obj.serviceCost();
+			
+			// Calculating the Item Cost
+			
+			if (obj.storageSmallDays > 0 && obj.storageLargeDays > 0)	// selecting both storages
+				obj.itemCost(obj.storageSmallDays, obj.storageLargeDays, obj.boxType);
+			else if (obj.storageSmallDays > 0)			// selecting small storage
+				obj.itemCost(obj.storageSmallDays, "S", obj.boxType);
+			else if (obj.storageLargeDays > 0)			// selecting large storage
+				obj.itemCost(obj.storageSmallDays, "L", obj.boxType);
+			else	// No storage selected
+				obj.itemCost(obj.boxType);
+			
+			// Calculating the Total Cost
+			obj.totalCost();
+			
+			// Display all the cost to the user.
+			JOptionPane.showMessageDialog(null, "Hi " + obj.firstName + obj.lastName + ",\n" + 
+												"The Service Cost is " + ft.format(obj.serviceCostValue) + "\n" +
+												"The Items Cost is " + ft.format(obj.itemCostValue) + "\n" +
+												"The Total Cost is " + ft.format(obj.totalCostValue));
+			
 		}
 		else 
 			JOptionPane.showMessageDialog(null, "You have exceeded your try’s, goodbye.!");
 		
 
+		System.exit(0);
 	}
 
 }
