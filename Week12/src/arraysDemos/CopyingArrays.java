@@ -1,7 +1,7 @@
 /**
  * 
  */
-package srcCH;
+package arraysDemos;
 
 /**
  * @author W10

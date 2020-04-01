@@ -1,4 +1,4 @@
-package srcCH;
+package arraysDemos;
 /**
    This program demonstrates that two variables can
    reference the same array.

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package srcTemp;
+package arraysDemos;
 
 /**
  * @author W10

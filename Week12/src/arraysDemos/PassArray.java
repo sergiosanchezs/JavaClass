@@ -1,4 +1,4 @@
-package srcCH;
+package arraysDemos;
 import java.util.Scanner;  // Needed for Scanner class
 
 /**

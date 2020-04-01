@@ -1,4 +1,4 @@
-package srcCH;
+package arraysDemos;
 /**
    This program demonstrates passing individual array
    elements as arguments to a method.

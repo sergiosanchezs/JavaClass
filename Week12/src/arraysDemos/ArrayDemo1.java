@@ -1,7 +1,7 @@
 /**
  * 
  */
-package arrayOne;
+package arraysDemos;
 
 import java.util.Scanner;
 

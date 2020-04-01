@@ -1,7 +1,7 @@
 /**
  * 
  */
-package arraryTwo;
+package arraysDemos;
 
 /**
  * @author W10
