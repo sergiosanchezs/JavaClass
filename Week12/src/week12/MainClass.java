@@ -1,7 +1,7 @@
 /**
  * 
  */
-package week2;
+package week12;
 
 /**
  * @author Sergio Sanchez
