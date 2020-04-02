@@ -55,7 +55,7 @@ public class ArraysClassExercise {
 
 		//4. Print the last two elements of the array in Q#1 by using a method
 		separator();
-		for (int i = 3; i < ARRAY_SIZE; i++)
+		for (int i = ARRAY_SIZE - 2; i < ARRAY_SIZE; i++)
 		{
 			System.out.print("number in position " + (i+1) + " is ");
 			printValue(numbers[i]);
@@ -64,9 +64,9 @@ public class ArraysClassExercise {
 	}
 	
 	public static void printValue(int num)
-   {
+	{
       System.out.println(num);
-   }
+	}
 	
 	public static void separator()
 	{
