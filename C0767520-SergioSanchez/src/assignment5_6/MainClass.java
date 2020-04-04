@@ -7,13 +7,19 @@ import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 /**
+ * The Program generates a quote for Bob's Moving LLC business.
+ * details of the quote:
+ * - Service Cost.
+ * - Item Cost.
+ * - Total Cost.
+ * 
  * @author Sergio Sanchez
  *
  */
-public class Assignment5_6 {
+public class MainClass {
 
 	/**
-	 * @param args
+	 * @param args NA
 	 */
 	public static void main(String[] args) {
 		
@@ -42,10 +48,10 @@ public class Assignment5_6 {
 			 * Small Box Price = $2.50
 			 * Large Box Price = $4.50
 			 */
-			Quote obj = new Quote();
-			Quote obj2 = new Quote(2.67, "s");
-			Quote obj3 = new Quote(5.13, "l");
-			Quote obj4 = new Quote(2.58, 4.76);
+			Program obj = new Program();
+			Program obj2 = new Program(2.67, "s");
+			Program obj3 = new Program(5.13, "l");
+			Program obj4 = new Program(2.58, 4.76);
 			// Assigning to the object the first and the last name fields
 			obj.firstName = JOptionPane.showInputDialog("Please, enter your first name: ");
 			obj.lastName = JOptionPane.showInputDialog("Please, enter your last name: ");
@@ -112,8 +118,6 @@ public class Assignment5_6 {
 		}
 		else 	// if the user exceeded the number of attempts to enter into the system
 			JOptionPane.showMessageDialog(null, "You have exceeded your try’s, goodbye.!");
-		
-		
 
 		System.exit(0);
 	}

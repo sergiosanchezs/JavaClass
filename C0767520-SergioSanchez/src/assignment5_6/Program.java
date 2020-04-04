@@ -4,10 +4,13 @@
 package assignment5_6;
 
 /**
+ * This class is to initialize the fields data for Bob's Moving LLC business.
+ * This class has three overloading constructors and 
+ * 3 methods overloading for serviceCost and itemCost methods.
  * @author Sergio Sanchez
  *
  */
-public class Quote {
+public class Program {
 	public String firstName;
 	public String lastName;
 	public double packageAPrice = 100.55;		//$100.55/hr
@@ -30,22 +33,40 @@ public class Quote {
 	 * Default values:
 	 * Small boxes = $2.50
 	 * Large boxes = $4.50
-	 * 
-	 * @return a double with the value of service cost.
 	 */
-	public Quote() {
+	public Program() {
 		this.smallBoxesPrice = 2.50;
 		this.LargeBoxesPrice = 4.50;
 	}
 	
-	public Quote(double boxPrice, String typeOfBox) {
+	/**
+	 * This constructor with receive two parameters to set a new price for one 
+	 * of the boxes and the other one remains in the default.
+	 * 
+	 * Default values:
+	 * Small boxes = $2.50
+	 * Large boxes = $4.50
+	 * 
+	 * @param boxPrice a double for setting the price of the box 
+	 * 		  you are passing on the next parameter. 
+	 * @param typeOfBox a String defining which box do you want to set the value, 
+	 * 		  for small (S or s) and for large (L o l).
+	 */
+	public Program(double boxPrice, String typeOfBox) {
 		if (typeOfBox.equalsIgnoreCase("S"))
 			this.smallBoxesPrice = boxPrice;
 		if (typeOfBox.equalsIgnoreCase("L"))
 		this.LargeBoxesPrice = boxPrice;
 	}
 	
-	public Quote(double boxSmall, double boxLarge) {
+	/**
+	 * This constructor with receive two parameters to set a new price 
+	 * for both boxes replacing the default values.
+	 * 
+	 * @param boxSmall a double for setting the new price of small box.
+	 * @param boxLarge a double for setting the new price of large box.
+	 */
+	public Program(double boxSmall, double boxLarge) {
 		this.smallBoxesPrice = boxSmall;
 		this.LargeBoxesPrice = boxLarge;
 	}
