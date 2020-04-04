@@ -16,7 +16,7 @@ public class Program {
 	public double packageAPrice = 100.55;		//$100.55/hr
 	public double packageBPrice = 150.00;		//$150/hr
 	public double storageSmallPrice = 8.00;		//$8/day
-	public double storageLargePrice = 20.01;	//$20.01/day
+	public double storageLargePrice = 20.11;	//$20.11/day
 	public double smallBoxesPrice = 2.50;				//$2.50
 	public double LargeBoxesPrice = 4.50;				//$4.50
 	public int packageAHours;
